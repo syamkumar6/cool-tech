@@ -1,0 +1,128 @@
+.pageHeader {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    background-image: url("../assets/images/cntImg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white); 
+    overflow: hidden; 
+}
+
+.pageHeader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 35, 85, 0.5);
+
+}
+
+.pageHeader > * {
+    position: relative;
+    
+}
+.pageHeader h2{
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.contentDiv{
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--color-white);
+    color: var(--primary-color-dark);
+    position: relative;
+}
+
+.contentDiv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%; /* Extend across 20% of the width */
+    height: 20%; /* Extend down 20% of the height */
+    border-top: 5px solid var(--primary-color-dark); /* Top border */
+    border-left: 5px solid var(--primary-color-dark); /* Left border */
+    box-sizing: border-box;
+    opacity: 50%;
+    border-radius: 10px;
+}
+.contentDiv p{
+    font-size: 1.7rem;
+}
+
+.ctSection{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.imageWrapper {
+    position: relative; /* Needed for the pseudo-element positioning */
+    width: 30rem;
+    height: 30rem;
+    border-radius: 5px;
+    overflow: hidden; 
+    transition: all 0.5s ease-in;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    display: block;
+    transition: all 0.5s ease-in;
+}
+
+
+.products{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.Link {
+    text-decoration: none;
+    color: var(--primary-color-dark);
+    transition: all 0.3s ease;
+  }
+  
+  .Link:hover {
+    color: var(--primary-color-light); 
+    transform: scale(1.01);
+  }
+  
+  .active {
+    color: var(--secondary-color); /* Highlight active link */
+    font-weight: bold;
+    text-decoration: underline; /* Optional styling */
+  }
+
+  @media (max-width: 768px){
+    .imageWrapper{
+        display: none;
+    }
+
+    .contentDiv::before{
+        width: 25%;
+        height: 5%;
+    }
+    .pageHeader{
+        height: 20vh;
+    }
+
+  }

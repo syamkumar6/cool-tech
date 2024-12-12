@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('./path/to/Work Sans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./path/to/Playfair Display.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('./path/to/EB Garamond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('./path/to/Josefin Sans.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lobster';
+  src: url('./path/to/Lobster.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+:root{
+  --primary-color: #064089;
+  --primary-color-light: #0A61c9;
+  --primary-color-dark: #052650;
+  --secondary-color: #27b3e6;
+  --color-white: #F1F7F9;
+  --color-black: #232b2b;
+
+  --font-primary: 'Work Sans', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'EB Garamond', serif;
+  --font-logo: 'Josefin Sans', serif;
+  --font-sub: 'Lobster', serif;
+}
+
+body {
+  overflow-x: hidden; 
+  background: #F1F7F9;
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading); /* This applies Playfair Display to headings */
+}
+
+p, span, a, li {
+  font-family: var(--font-body); /* This applies EB Garamond to body text */
+}
+
+main{
+  position: relative;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.embla__slide img{
+  width: 100%;
+}
+

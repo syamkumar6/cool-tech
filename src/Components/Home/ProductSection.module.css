@@ -1,0 +1,116 @@
+.ProductSection {
+  padding: 3rem 2rem;
+  padding-bottom: 8rem;
+  background: var(--color-white);
+  color: var(--primary-color-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.pHeadDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-left: 6px solid var(--primary-color-dark);
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  color: var(--primary-color-dark)
+}
+
+.pHeadDiv span {
+  font-size: 2rem;
+}
+
+.pHeadDiv h2 {
+  font-size: 3rem;
+}
+
+.pHeadDiv2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.pHeadDiv2 p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.prodCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.cardImg {
+  width: 17rem;
+  height: 20rem;
+  object-fit: fill;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.prodCard:hover .cardImg {
+    transform: scale(1.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .prodCard span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: #fff;
+    background-color: rgba(5, 38, 80, 0.8); /* Black with 50% opacity */
+    padding: 3rem;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 90%;
+  }
+  
+  .prodCard:hover span {
+    opacity: 1;
+  }
+.pLink {
+  text-decoration: none;
+  align-self: flex-end;
+  background: var(--secondary-color);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.prodCard h5{
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-color-dark);
+}
+
+@media (max-width: 768px) {
+  .prodCard{
+    margin-left: .5rem;
+  }
+  .ProductSection{
+    padding-bottom: 2rem;
+  }
+}

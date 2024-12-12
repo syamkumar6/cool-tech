@@ -1,0 +1,297 @@
+.Header {
+  position: relative;
+  width: 100vw;
+  height: 20vh;
+  background: rgb(154,187,230);
+  background: linear-gradient(90deg, var(--primary-color-dark) 30%, rgb(154,187,230,1) 87%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border-bottom: 1px solid rgb(223, 221, 221) ;
+  z-index: 100;
+}
+
+.Header nav {
+  background-color: var(--color-white);
+  padding: 1.6rem 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.logoDiv {
+  position: relative;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.logo {
+  font-size: 2.5rem;
+  background: linear-gradient(to bottom, #f1f7f9, #27b3e6); /* Gradient from top to bottom */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional: keep text shadow */
+  font-family: var(--font-logo);
+  font-weight: bolder;
+}
+
+.subLogo {
+  position: absolute;
+  bottom: -2%;
+  right: 10%;
+  font-size: 2rem; /* Consistent font size as stated */
+  color: #c1e3f0;
+  background: linear-gradient(to bottom, #f1f7f9, #27b3e6); /* Gradient from top to bottom */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; 
+  letter-spacing: 2px;
+  font-family: var(--font-sub);
+  
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+.Link {
+  text-decoration: none;
+  color: var(--color-black);
+  padding-right: 2rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.Link:hover {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color:var(--color-white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 100;
+}
+
+.dropdownContent a {
+  display: block;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  color: var(--color-black);
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s;
+  border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+.dropdownContent a:hover {
+  background-color: var(--primary-color-dark);
+  color: var(--color-white);
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.formCnt{
+  position: relative;
+  padding: 2rem;
+  background: linear-gradient(0deg, rgb(101, 145, 211) 30%, rgb(206, 220, 238) 87%);
+  width: 27rem;
+  border-radius: 5px;
+}
+
+.formCnt h2{
+  color: var(--primary-color-dark);
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 25rem;
+  padding:  2rem ;
+}
+
+.form input{
+  padding: 1rem;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--color-white);
+}
+
+.form textarea{
+  padding: 1rem;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background: var(--color-white);
+}
+
+.form input::placeholder{
+  color: var(--primary-color-dark);
+  font-weight: 600;
+}
+
+.form textarea::placeholder{
+  color: var(--primary-color-dark);
+  font-weight: 600;
+}
+
+.form button{
+  background-color: var(--secondary-color);
+  border: none;
+  padding: .5rem 1rem;
+  transition: all .3s ease;
+}
+
+.form button:hover{
+  transform: scale(1.1);
+}
+
+.closeBtn{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border: none;
+}
+
+.closeBtn img{
+  border: none;
+}
+
+.sideSection{
+  display: none;
+}
+
+.sideSection {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially hidden off-screen to the right */
+  width: 300px;
+  height: 50vh;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 200;
+  transition: right 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+.sideSectionOpen {
+  right: 0; /* Slide into view from the right */
+}
+
+.closeBtn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.menuBtn {
+  background: none;
+  border: 1px solid var(--primary-color-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.menuBtn img{
+  height: 2rem;
+}
+
+.menuBtn{
+  display: none;
+}
+
+.nav2{
+  color: var(--color-black);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-left: 1rem;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: shake 3s ease-in-out 3s infinite;
+  font-weight: bold;
+}
+
+.button img{
+  width: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .nav{
+    display: none !important;
+  }
+
+  .menuBtn{
+    display: block;
+  }
+
+  .logo{
+    font-size: 2rem;
+    margin-left: -2rem;
+  }
+
+  .Header{
+    height: 16vh;
+  }
+}
+

@@ -1,0 +1,137 @@
+.footer{
+    background-color: var(--color-black);
+    color:var(--color-white);
+}
+
+.footerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 1px solid;
+}
+
+.firstSection{
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.innerBox{
+    text-decoration: none;
+    color:var(--color-white);
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.innerBox:hover{
+    background-color: var(--primary-color);
+    transition: all .3s ease;
+}
+
+.innerBox h4{
+    font-size: 2rem;
+}
+
+.innerBox img{
+   width: 4rem;
+}
+
+.innerContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.innerContainer span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.secondSection{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footerLink{
+    text-decoration: none;
+    color:var(--color-white);
+    font-weight: bolder;
+    position: relative;
+    padding-left: 16px;
+}
+
+.footerLink::before {
+    content: '>'; 
+    position: absolute;
+    left: 0;
+    color: var(--color-white);
+  }
+
+.innerh2{
+    margin-bottom: 1rem;
+}
+
+.footerLink:hover{
+    transform: scale(1.03);
+    transition: all .2s ease;
+    color: var(--primary-color-light);
+}
+
+.mapSection{
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    width: 20rem;
+    height: 20rem;
+}
+
+.lastSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .8rem ;
+}
+
+.address2{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .address{
+        display: none;
+    }
+    .address2{
+        display: block;
+    }
+    .firstSection{
+        display: none;
+    }
+    .secondSection{
+        flex-direction: column;
+        padding-left: 1.8rem;
+        gap: 1rem;
+    }
+    .links{
+        display: none;
+    }
+   .footerContainer{
+    flex-direction: column;
+   }
+  }
