@@ -19,7 +19,7 @@ function HomePage() {
     // Simulate loading time or wait for page content to load
     const timer = setTimeout(() => {
       setLoading(false); // Hide loader after content is loaded
-    }, 2000); // Set your desired delay here (in milliseconds)
+    }, 5000); // Set your desired delay here (in milliseconds)
 
     // Cleanup the timer if the component is unmounted
     return () => clearTimeout(timer);
