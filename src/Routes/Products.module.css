@@ -47,8 +47,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 1rem;
     border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -111,5 +114,10 @@
     .pageHeader{
       height: 20vh;
       text-align: center;
+    }
+    .cardContainer{
+      display: flex;
+      flex-direction: column;
+      
     }
   }

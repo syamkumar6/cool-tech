@@ -98,5 +98,16 @@
 }
 
 @media (max-width: 768px){
+    .pageHeader{
+        height: 20vh;
+    }
     
-}
+    .container{
+        padding: 1rem 0;
+    }
+
+    .container h1{
+        font-size: 2.3rem;
+    }
+
+} 

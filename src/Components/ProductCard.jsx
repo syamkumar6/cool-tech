@@ -35,6 +35,7 @@ function ProductCard() {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          dots: false,
         },
       },
     ],

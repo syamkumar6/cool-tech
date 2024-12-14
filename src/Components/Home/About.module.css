@@ -85,6 +85,10 @@
     display: none;
   }
   .aboutSection{
+    margin-top: 0;
     padding-bottom: 2rem;
   }
+.aboutH2{
+  font-size: 2.5rem;
+}
 }

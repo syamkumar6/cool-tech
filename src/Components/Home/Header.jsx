@@ -59,11 +59,10 @@ function Header() {
             <Link className={styles.Link}>PRODUCTS & SERVICES</Link>
             <div className={styles.dropdownContent}>
               <Link to={"/service/" + 3}> Kitchen Cabinets</Link>
-              <Link to={""}>Wardrobes</Link>
+              <Link to={"/service/" +14}>Wardrobes</Link>
               <Link to={"/service/" + 5}>Doors and Windows</Link>
               <Link to={"/service/" + 2}>Partitions</Link>
-              <Link to={""}>false ceilings</Link>
-              <Link to={""}>prayer cabinets</Link>
+              <Link to={"/service/" + 1}>Glass Partition</Link>
               <Link to={"/service/" + 4}>Showcase</Link>
               <Link to={"/products"}>View All</Link>
             </div>
@@ -155,26 +154,25 @@ function Header() {
           <img src={closeIcon2} alt="" />
         </button>
         <nav className={styles.nav2}>
-          <Link to={"/"} className={styles.Link}>
+          <Link to={"/"} onClick={handleCloseMenu} className={styles.Link}>
             HOME
           </Link>
-          <Link to={"/about"} className={styles.Link}>
+          <Link to={"/about"} onClick={handleCloseMenu} className={styles.Link}>
             ABOUT
           </Link>
           <div className={styles.dropdown}>
             <Link className={styles.Link}>PRODUCTS & SERVICES</Link>
             <div className={styles.dropdownContent}>
-              <Link to={"/service/" + 3}> Kitchen Cabinets</Link>
-              <Link to={"/service/" + 14}>Wardrobes</Link>
-              <Link to={"/service/" + 5}>Doors and Windows</Link>
-              <Link to={"/service/" + 2}>Partitions</Link>
-              <Link to={""}>false ceilings</Link>
-              <Link to={""}>prayer cabinets</Link>
-              <Link to={"/service/" + 4}>Showcase</Link>
-              <Link to={"/products"}>View All</Link>
+              <Link to={"/service/" + 3} onClick={handleCloseMenu}> Kitchen Cabinets</Link>
+              <Link to={"/service/" + 14} onClick={handleCloseMenu}>Wardrobes</Link>
+              <Link to={"/service/" + 5} onClick={handleCloseMenu}>Doors and Windows</Link>
+              <Link to={"/service/" + 2} onClick={handleCloseMenu}>Partitions</Link>
+              <Link to={"/service/" + 1} onClick={handleCloseMenu}>Glass Partition</Link>
+              <Link to={"/service/" + 4} onClick={handleCloseMenu}>Showcase</Link>
+              <Link to={"/products"} onClick={handleCloseMenu}>View All</Link>
             </div>
           </div>
-          <Link to={"contact"} className={styles.Link}>
+          <Link to={"contact"} className={styles.Link} onClick={handleCloseMenu}>
             CONTACT
           </Link>
           <Link

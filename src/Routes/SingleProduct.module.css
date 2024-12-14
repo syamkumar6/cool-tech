@@ -217,4 +217,11 @@
       .productDet::before {
         display: none;
     }
+
+    .subHead{
+        border-left: 1rem solid var(--primary-color);
+        font-size: 2rem;
+        padding-left: 1rem;
+        margin-top: -1rem;
+    }
 }

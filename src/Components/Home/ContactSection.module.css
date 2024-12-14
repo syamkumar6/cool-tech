@@ -64,6 +64,7 @@ textarea::placeholder {
   gap: 1rem;
   background: var(--secondary-color);
   color: var(--color-white);
+  margin-bottom: 2rem;
 }
 
 .contactS2 {
@@ -100,5 +101,12 @@ textarea::placeholder {
   .formSection{
     display: block;
     width: 100vw;
+  }
+  .contactSection{
+    height: 45rem;
+  }
+
+  .contactForm button{
+    margin-bottom: 2rem m !important;
   }
 }

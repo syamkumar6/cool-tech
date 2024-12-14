@@ -20,7 +20,7 @@ import window2 from "./../assets/images/window2.png"
 import partition2 from "./../assets/images/partition2.jpg"
 import glass3 from "./../assets/images/glass3.jpg"
 import net from "./../assets/images/netWindow.png"
-import pleated from "./../assets/images/pleated1.jpg"
+import pleated from "./../assets/images/pleated.png"
 import ward2 from "./../assets/images/ward2.jpg"
 import wpc from "./../assets/images/wpc.jpg"
 import tv from "./../assets/images/tv.jpg"
@@ -46,6 +46,9 @@ import wpc5 from "./../assets/images/wpc5.png"
 import tv2 from "./../assets/images/tv2.jpg"
 import tv3 from "./../assets/images/tv3.jpg"
 import tv4 from "./../assets/images/tv4.jpg"
+import tvBg from "./../assets/images/tvBg.png"
+import wpcBg from "./../assets/images/wpcBg.png"
+import warBg from "./../assets/images/warBg.png"
 
 const cardData = [
     {
@@ -100,7 +103,7 @@ const cardData = [
     {
         img: ward3,
         gImg: [ward3, ward, ward2, ward4, ward5],
-        bg: pleatedBg,
+        bg: warBg,
         title: "Wardrobe",
         description: [
           "We specialize in crafting wardrobes that combine functionality with superior aesthetics, using only the highest quality materials. Our designs are built with robust aluminium channels that ensure structural strength, lightweight functionality, and resistance to wear and tear. The use of premium-grade Sunmica sheets adds a sleek and elegant finish, available in a wide range of colors, patterns, and textures to complement any interior style. With precision-engineered hardware, including durable hinges, smooth sliding mechanisms, and soft-close fittings, our wardrobes are designed for effortless operation and lasting performance.",
@@ -112,7 +115,7 @@ const cardData = [
       {
         img: wpc2,
         gImg: [wpc, wpc2, wpc3, wpc4, wpc5],
-        bg: pleatedBg,
+        bg: wpcBg,
         title: "Wall Paneling (WPC)",
         description: [
           "WPC (Wood Plastic Composite) wall paneling is a modern and versatile solution for enhancing the aesthetics and functionality of your interiors and exteriors. Known for its durability and eco-friendly composition, WPC combines the natural elegance of wood with the strength of polymers, resulting in a highly resilient and low-maintenance material. Its wide range of designs, textures, and colors allows you to create stunning walls that complement any decor style, from contemporary minimalism to classic elegance.",
@@ -124,7 +127,7 @@ const cardData = [
       {
         img: tv3,
         gImg: [tv, tv3, tv2, tv4],
-        bg: pleatedBg,
+        bg: tvBg,
         title: "TV Units",
         description: [
           "Our TV units are designed to blend functionality with style, offering a seamless solution to organize your entertainment setup while elevating the aesthetics of your space. Crafted with premium materials like high-quality aluminium channels and precision-engineered hardware, these units ensure long-lasting performance and a sleek, modern look. Whether you prefer a minimalist floating design, a spacious wall-mounted unit, or a traditional floor-standing style, we create custom TV units tailored to suit your needs and interior decor.",

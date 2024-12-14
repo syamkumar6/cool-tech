@@ -96,9 +96,11 @@
 }
 
 .Link {
+    position: relative;
     text-decoration: none;
     color: var(--primary-color-dark);
     transition: all 0.3s ease;
+    padding-left: 1.5rem;
   }
   
   .Link:hover {
@@ -112,17 +114,33 @@
     text-decoration: underline; /* Optional styling */
   }
 
+  .Link::before {
+    content: '>'; 
+    position: absolute;
+    left: 0;
+    color: var(--primary-color-dark);
+    font-weight: bold;
+  }
+
   @media (max-width: 768px){
     .imageWrapper{
         display: none;
     }
 
     .contentDiv::before{
-        width: 25%;
-        height: 5%;
+        display: none;
     }
     .pageHeader{
         height: 20vh;
+    }
+
+    .contentDiv p{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .contentDiv{
+        margin: 0;
     }
 
   }

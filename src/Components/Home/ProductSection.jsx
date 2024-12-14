@@ -65,7 +65,7 @@ function ProductSection() {
         </Slider>
         
       </ul>
-      <Link className={styles.pLink}>View all</Link>
+      <Link to={"/products"} className={styles.pLink}>View all</Link>
     </div>
   );
 }

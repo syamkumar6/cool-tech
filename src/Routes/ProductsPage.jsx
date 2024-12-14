@@ -26,7 +26,7 @@ function ProductsPage() {
                 : data.title;
 
             return (
-              <Link key={index} className={styles.cardBody}>
+              <Link key={index} to={"/service/"+ data.id} className={styles.cardBody}>
                 <img
                   className={styles.cardImg}
                   src={data.img}
