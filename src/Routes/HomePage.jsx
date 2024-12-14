@@ -15,22 +15,14 @@ function HomePage() {
   const [loading, setLoading] = useState(true);
 
 
-  useEffect(() => {
-    // Check if it's the first visit or a refresh
-    const isFirstVisit = sessionStorage.getItem("firstVisit");
+ useEffect(() => {
+    // Simulate loading time or wait for page content to load
+    const timer = setTimeout(() => {
+      setLoading(false); // Hide loader after content is loaded
+    }, 2000); // Set your desired delay here (in milliseconds)
 
-    if (isFirstVisit) {
-      setLoading(false); // If not first visit, hide loader immediately
-    } else {
-      // If it's the first visit, show loader for 5 seconds
-      const timer = setTimeout(() => {
-        setLoading(false); // Hide loader after 5 seconds
-        sessionStorage.setItem("firstVisit", "true"); // Mark as not first visit
-      }, 5000); // Set your desired delay here (in milliseconds)
-
-      // Cleanup the timer if the component is unmounted
-      return () => clearTimeout(timer);
-    }
+    // Cleanup the timer if the component is unmounted
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
