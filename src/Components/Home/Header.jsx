@@ -8,6 +8,7 @@ import menuIcon from "../../assets/svg/menu.svg";
 import closeIcon2 from "../../assets/svg/close2.svg";
 import whatsIcon from "../../assets/svg/whatsappLogo.svg";
 import callIcon from "../../assets/svg/callIcon.svg";
+import logo from "../../assets/images/logo3.png"
 
 function Header() {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,8 +46,7 @@ function Header() {
     <>
       <header className={styles.Header}>
         <div className={styles.logoDiv}>
-          <span className={styles.logo}>COOL TECH</span>
-          <span className={styles.subLogo}>Interior</span>
+          <img src={logo} alt="logo" />
         </div>
         <nav className={styles.nav}>
           <Link to={"/"} className={styles.Link}>
