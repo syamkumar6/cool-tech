@@ -16,12 +16,9 @@ function HomePage() {
 
 
  useEffect(() => {
-    // Simulate loading time or wait for page content to load
     const timer = setTimeout(() => {
-      setLoading(false); // Hide loader after content is loaded
-    }, 5000); // Set your desired delay here (in milliseconds)
-
-    // Cleanup the timer if the component is unmounted
+      setLoading(false); 
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -33,7 +30,7 @@ function HomePage() {
   return (
     <main>
       {loading ? (
-        <Loader /> // Show loader if the page is still loading
+        <Loader />
       ) : (
         <>
           <WhatsappMsg />

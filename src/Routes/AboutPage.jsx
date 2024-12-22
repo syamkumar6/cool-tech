@@ -8,7 +8,6 @@ import logo from "./../assets/images/cntLogo.png";
 function AboutPage() {
   const [hoveredImage, setHoveredImage] = useState(logo); // Default image
 
-
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -39,8 +38,7 @@ function AboutPage() {
                   key={index}
                   className={styles.Link}
                   onMouseEnter={() => setHoveredImage(item.img)}
-                  onMouseLeave={() => setHoveredImage(logo)} // Reset to default image on mouse leave
-                   // Set active link on click
+                  onMouseLeave={() => setHoveredImage(logo)} 
                 >
                   {item.title}
                 </Link>

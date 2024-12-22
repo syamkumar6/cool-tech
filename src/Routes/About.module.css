@@ -50,10 +50,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 20%; /* Extend across 20% of the width */
-    height: 20%; /* Extend down 20% of the height */
-    border-top: 5px solid var(--primary-color-dark); /* Top border */
-    border-left: 5px solid var(--primary-color-dark); /* Left border */
+    width: 20%;
+    height: 20%;
+    border-top: 5px solid var(--primary-color-dark);
+    border-left: 5px solid var(--primary-color-dark); 
     box-sizing: border-box;
     opacity: 50%;
     border-radius: 10px;
@@ -71,7 +71,7 @@
 }
 
 .imageWrapper {
-    position: relative; /* Needed for the pseudo-element positioning */
+    position: relative;
     width: 30rem;
     height: 30rem;
     border-radius: 5px;
@@ -109,9 +109,9 @@
   }
   
   .active {
-    color: var(--secondary-color); /* Highlight active link */
+    color: var(--secondary-color);
     font-weight: bold;
-    text-decoration: underline; /* Optional styling */
+    text-decoration: underline; 
   }
 
   .Link::before {
