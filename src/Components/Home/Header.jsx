@@ -8,7 +8,7 @@ import menuIcon from "../../assets/svg/menu.svg";
 import closeIcon2 from "../../assets/svg/close2.svg";
 import whatsIcon from "../../assets/svg/whatsappLogo.svg";
 import callIcon from "../../assets/svg/callIcon.svg";
-import logo from "../../assets/images/logo3.png"
+import logo from "../../assets/images/logo2.webP"
 
 function Header() {
   const [isVisible, setIsVisible] = useState(false);

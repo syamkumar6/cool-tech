@@ -3,7 +3,7 @@
   flex-direction: row;
   gap: 2rem;
   justify-content: space-around;
-  background-image: url("../../assets/images/bgBlue.jpg"); 
+  background-image: url("../../assets/images/bgBlue.webP"); 
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat; 

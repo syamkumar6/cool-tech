@@ -57,7 +57,7 @@ function ProductSection() {
         <Slider {...settings}>
           {cardData.map((data, index) => (
             <Link to={"/service/"+data.id} key={index} className={styles.prodCard}>
-              <img className={styles.cardImg} src={data.img} alt={data.title} />
+              <img className={styles.cardImg} src={data.img} alt={data.title} loading="lazy"/>
               <h5>{data.title}</h5>
               <span>View Details <img className={styles.arrow} src={arrowIcon} alt="" /></span>
             </Link>

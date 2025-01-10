@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import ContactSection from "../Components/Home/ContactSection";
 import styles from "./About.module.css";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import cardData from "../Components/CardData";
-import logo from "./../assets/images/cntLogo.png"; 
+import logo from "./../assets/images/cntLogo.webP"; 
 
 function AboutPage() {
   const [hoveredImage, setHoveredImage] = useState(logo); // Default image
@@ -16,8 +17,22 @@ function AboutPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>About COOL TECH Interior | Aluminium Fabrication Experts</title>
+        <meta
+          name="description"
+          content="Learn about COOL TECH Interior, your trusted partner in aluminum fabrication since 2000. Based in Coorg, Karnataka, we deliver quality and innovation."
+        />
+        <meta name="keywords" content="COOL TECH Interior, aluminum fabrication, Coorg, Karnataka" />
+        <meta name="author" content="COOL TECH Interior" />
+        <meta property="og:title" content="About COOL TECH Interior | Aluminium Fabrication Experts" />
+        <meta property="og:description" content="Discover COOL TECH Interior's 24 years of excellence in aluminum fabrication and custom interiors in Coorg, Karnataka." />
+        <meta property="og:image" content="./../assets/images/cntLogo.png" />
+        <meta property="og:url" content="https://cooltechinterior.com/about" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className={styles.pageHeader}>
-        <h2>About Us</h2>
+        <h1>About Us</h1>
       </div>
 
       <div className={styles.contentDiv}>

@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import styles from "./HomeCarousel.module.css";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import CrlImg1 from "../../assets/images/carouselImg1.png";
-import CrlImg4 from "../../assets/images/carouselImg4.png";
-import CrlImg5 from "../../assets/images/carouselImg5.png";
-import CrlImg6 from "../../assets/images/carouselImg6.png";
-import CrlImg2 from "../../assets/images/carouselImg2.png";
-import CrlImg3 from "../../assets/images/carouselImg3.png";
+import CrlImg1 from "../../assets/images/carouselImg1.webP";
+import CrlImg4 from "../../assets/images/carouselImg4.webP";
+import CrlImg5 from "../../assets/images/carouselImg5.webP";
+import CrlImg6 from "../../assets/images/carouselImg6.webP";
+import CrlImg2 from "../../assets/images/carouselImg2.webP";
+import CrlImg3 from "../../assets/images/carouselImg3.webP";
 import { Link } from "react-router-dom";
 
 function HomeCarousel() {
@@ -108,6 +108,7 @@ function HomeCarousel() {
               className={styles.carouselImg}
               src={slide.src}
               alt={slide.alt}
+              loading="lazy"
             />
             <div className={styles.imgOverlay}></div>
             <div className={styles.cntDiv}>
