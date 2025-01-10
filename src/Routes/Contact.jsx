@@ -14,11 +14,11 @@ function Contact() {
   return (
     <div>
       <div className={styles.pageHeader}>
-        <h2>Contact Us</h2>
+        <h1>Contact Us</h1>
       </div>
       <div className={styles.cntContainer}>
       <div className={styles.container}>
-        <h1>We’re Here to Help</h1>
+        <h2>We’re Here to Help</h2>
         <div className={styles.row1}>
           <h3> <img src={addressIcon} alt="" />  Address</h3>
           <span>

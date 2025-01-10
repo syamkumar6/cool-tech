@@ -57,7 +57,7 @@ function SingleProductPage() {
           backgroundImage: `url(${data.bg})`,
         }}
       >
-        <h2>{data.title}</h2>
+        <h1>{data.title}</h1>
       </div>
 
       <div className={styles.pageContainer}>
