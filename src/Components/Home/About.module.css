@@ -1,4 +1,4 @@
-.aboutSection{
+  .aboutSection{
     background-color: rgb(189, 209, 240);
     /* background: linear-gradient(to top left, rgb(101, 145, 211) 50%, rgb(189, 209, 240) 97%); */
     color: var(--primary-color-dark);

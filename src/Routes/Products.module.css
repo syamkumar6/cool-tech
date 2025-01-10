@@ -2,11 +2,10 @@
     position: relative;
     width: 100%;
     height: 30vh;
-    background-image: url("../assets/images/productsBg.webP");
+    background-image: url("../assets/images/productsBg.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     justify-content: center;
     align-items: center;

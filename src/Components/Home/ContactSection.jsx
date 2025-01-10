@@ -16,13 +16,11 @@ function ContactSection() {
     message: "",
   });
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Side effect: handle success
   useEffect(() => {
     if (state.succeeded) {
       toast.success("Form submitted successfully!");
@@ -33,7 +31,7 @@ function ContactSection() {
         message: "",
       });
     }
-  }, [state.succeeded]); // Run this effect only when `state.succeeded` changes
+  }, [state.succeeded]);
 
   return (
     <div className={styles.contactSection}>

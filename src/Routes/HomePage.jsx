@@ -28,20 +28,25 @@ function HomePage() {
   return (
     <main>
       <Helmet>
-        <title>Aluminium Fabrication in Coorg, Karnataka | COOL TECH Interior</title>
+        <title>
+          Aluminium Fabrication in Gonikoppal, Kodagu (Coorg) | COOL TECH Interior
+        </title>
         <meta
           name="description"
-          content="COOL TECH Interior offers premium aluminium fabrication services in Coorg, Karnataka. Contact us for high-quality, custom interior solutions."
+          content="COOL TECH Interior offers premium aluminium fabrication services in Gonikoppal, Kodagu (Coorg). Contact us for high-quality, custom interior solutions."
         />
         <meta
           name="keywords"
-          content="aluminium fabrication, Coorg, COOL TECH Interior, custom interiors, fabrication services"
+          content="aluminium fabrication, Kodagu, Coorg, Gonikoppal, COOL TECH fabrication, custom interiors, fabrication services"
         />
         <meta name="author" content="COOL TECH Interior" />
-        <meta property="og:title" content="Aluminium Fabrication in Coorg, Karnataka | COOL TECH Interior" />
+        <meta
+          property="og:title"
+          content="Aluminium Fabrication in Gonikoppal, Kodagu (Coorg) | COOL TECH Interior"
+        />
         <meta
           property="og:description"
-          content="Premium aluminium fabrication services and interior design in Coorg. Contact COOL TECH Interior for tailored solutions!"
+          content="Premium aluminium fabrication services and interior design in Gonikoppal, Kodagu (Coorg). Contact COOL TECH Interior for tailored solutions!"
         />
         <meta property="og:image" content="./src/assets/svg/logo.png" />
         <meta property="og:url" content="https://cooltechinterior.com" />
@@ -66,4 +71,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
