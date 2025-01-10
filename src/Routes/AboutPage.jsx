@@ -4,7 +4,7 @@ import styles from "./About.module.css";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import cardData from "../Components/CardData";
-import logo from "./../assets/images/cntLogo.webP"; 
+import logo from "./../assets/images/cntLogo.webp"; 
 
 function AboutPage() {
   const [hoveredImage, setHoveredImage] = useState(logo); // Default image
