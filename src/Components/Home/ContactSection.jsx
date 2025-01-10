@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import toast from "react-hot-toast";
 import styles from "./ContactSection.module.css";
 import sendlIcon from "../../assets/svg/send.svg";
-import starIcon from "../../assets/images/star.webP";
+import starIcon from "../../assets/images/star.webp";
 import callIcon from "../../assets/svg/call.svg";
 import emailIcon from "../../assets/svg/email.svg";
 

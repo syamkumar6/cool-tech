@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './About.module.css'
-import frameImg from "../../assets/images/frame.webP"
+import frameImg from "../../assets/images/frame.webp"
 
 function AboutSection() {
   return ( 

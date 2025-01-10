@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import styles from "./HomeCarousel.module.css";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import CrlImg1 from "../../assets/images/carouselImg1.webP";
-import CrlImg4 from "../../assets/images/carouselImg4.webP";
-import CrlImg5 from "../../assets/images/carouselImg5.webP";
-import CrlImg6 from "../../assets/images/carouselImg6.webP";
-import CrlImg2 from "../../assets/images/carouselImg2.webP";
-import CrlImg3 from "../../assets/images/carouselImg3.webP";
+import CrlImg1 from "../../assets/images/carouselImg1.webp";
+import CrlImg4 from "../../assets/images/carouselImg4.webp";
+import CrlImg5 from "../../assets/images/carouselImg5.webp";
+import CrlImg6 from "../../assets/images/carouselImg6.webp";
+import CrlImg2 from "../../assets/images/carouselImg2.webp";
+import CrlImg3 from "../../assets/images/carouselImg3.webp";
 import { Link } from "react-router-dom";
 
 function HomeCarousel() {
