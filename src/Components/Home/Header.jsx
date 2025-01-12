@@ -85,8 +85,9 @@ function Header() {
               <button
                 onClick={() => setIsVisible(false)}
                 className={styles.closeBtn}
+                aria-label="close button"
               >
-                {" "}
+                
                 <img src={closeIcon} alt="closeIcon" />{" "}
               </button>
               <form onSubmit={handleSubmit} className={styles.form}>
@@ -140,7 +141,7 @@ function Header() {
             </div>
           </div>
         )}
-        <button onClick={handleMenuToggle} className={styles.menuBtn}>
+        <button onClick={handleMenuToggle} className={styles.menuBtn} aria-label="menu button">
           <img src={menuIcon} alt="menuIcon" />
         </button>
       </header>
@@ -150,8 +151,8 @@ function Header() {
           isMenuOpen ? styles.sideSectionOpen : ""
         }`}
       >
-        <button onClick={handleCloseMenu} className={styles.closeBtn}>
-          <img src={closeIcon2} alt="" />
+        <button onClick={handleCloseMenu} className={styles.closeBtn} aria-label="close button2">
+          <img src={closeIcon2} alt="close Icon" />
         </button>
         <nav className={styles.nav2}>
           <Link to={"/"} onClick={handleCloseMenu} className={styles.Link}>
@@ -182,10 +183,10 @@ function Header() {
           >
             REQUEST A QUOTE
           </Link>
-          <button onClick={handleWhatsAppClick} className={styles.button}>
+          <button onClick={handleWhatsAppClick} className={styles.button} aria-label="wt button">
         <img src={whatsIcon} alt="WhatsApp Logo" /> Whatsapp
       </button>
-      <button onClick={handleCallClick} className={styles.button}>
+      <button onClick={handleCallClick} className={styles.button} aria-label="call button">
         <img src={callIcon} alt="Call Icon" /> Call
       </button>
         </nav>
@@ -196,8 +197,8 @@ function Header() {
               <button
                 onClick={() => setIsVisible(false)}
                 className={styles.closeBtn}
+                aria-label="close button"
               >
-                {" "}
                 <img src={closeIcon} alt="closeIcon" />{" "}
               </button>
               <form onSubmit={handleSubmit} className={styles.form}>

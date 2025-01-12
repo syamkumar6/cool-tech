@@ -11,7 +11,7 @@ function AboutSection() {
             <p>Founded in 2000 amidst the scenic beauty of Coorg, Karnataka, we have been a steadfast provider of high-quality aluminum services for over two decades. Driven by a commitment to precision, craftsmanship, and innovation, we’ve earned a reputation as a trusted partner for clients seeking durable, custom-built aluminum solutions... </p><Link to={"/about"} className={styles.readMoreBtn}>Read more</Link>
             </div>
             <div className={styles.ImageContent}>
-                <img src={frameImg} alt="" loading="lazy"/>
+                <img src={frameImg} alt="frameImg" loading="lazy"/>
             </div>
         </div>
     </div>

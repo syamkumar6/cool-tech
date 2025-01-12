@@ -15,18 +15,16 @@ function Footer() {
       <div className={styles.footerContainer}>
         <div className={styles.firstSection}>
           <Link
-            to={"/hospitals"}
+            to={"/about"}
             className={styles.innerBox}
             onClick={scrollToTop}
           >
-            <img src="" alt="" />
             <div>
               <h4>Overview</h4>
               <span>Crafting Excellence Since 2000</span>
             </div>
           </Link>
           <Link className={styles.innerBox}>
-            <img src="" alt="" />
             <div>
               <h4>Contact</h4>
               <span>We’re Here to Help</span>
@@ -41,7 +39,7 @@ function Footer() {
                 {" "}
                 kitchen cabinets
               </Link>
-              <Link to={""} className={styles.footerLink}>
+              <Link to={"/service/" +14} className={styles.footerLink}>
                 wardrobes
               </Link>
               <Link to={"/service/" + 5} className={styles.footerLink}>
@@ -53,14 +51,8 @@ function Footer() {
               <Link to={"/service/" + 1} className={styles.footerLink}>
                 cubic glass work
               </Link>
-              <Link to={""} className={styles.footerLink}>
+              <Link to={"/service/" + 12} className={styles.footerLink}>
                 mosquito net windows and doors
-              </Link>
-              <Link to={""} className={styles.footerLink}>
-                false ceilings
-              </Link>
-              <Link to={""} className={styles.footerLink}>
-                prayer cabinets
               </Link>
               <Link to={"/service/" + 6} className={styles.footerLink}>
                 Composite Panel System

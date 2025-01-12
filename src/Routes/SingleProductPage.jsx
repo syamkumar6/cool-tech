@@ -99,7 +99,7 @@ function SingleProductPage() {
               >
                 <img src={whatsIcon} alt="WhatsApp Logo" /> Message
               </button>
-              <button onClick={handleCallClick} className={styles.callButton}>
+              <button onClick={handleCallClick} className={styles.callButton} >
                 <img src={callIcon} alt="Call Icon" /> Call
               </button>
             </div>

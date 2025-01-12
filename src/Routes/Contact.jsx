@@ -20,7 +20,7 @@ function Contact() {
       <div className={styles.container}>
         <h2>We’re Here to Help</h2>
         <div className={styles.row1}>
-          <h3> <img src={addressIcon} alt="" />  Address</h3>
+          <h3> <img src={addressIcon} alt="addressIcon" />  Address</h3>
           <span>
             M.D. Complex, Opp. Jayappa Complex, Ponnampet Road,
             <br /> Gonikoppal, karnataka 571213, India 
@@ -38,7 +38,7 @@ function Contact() {
         
       </div>
         <div className={styles.imgContainer}>
-          <img src="" alt="" />
+        
         </div>
       </div>
       
