@@ -41,6 +41,9 @@
     background: var(--color-white);
 }
 
+li{
+  list-style: none;
+}
 .cardBody{
     position: relative;
     display: flex;

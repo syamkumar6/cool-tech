@@ -40,7 +40,8 @@ function ProductsPage() {
                 : data.title;
 
             return (
-              <Link key={index} to={"/service/"+ data.id} className={styles.cardBody}>
+              <li key={index}>
+                <Link  to={"/service/"+ data.id} className={styles.cardBody}>
                 <img
                   className={styles.cardImg}
                   src={data.img}
@@ -52,6 +53,8 @@ function ProductsPage() {
                   <img className={styles.arrow} src={arrowIcon} alt="" />
                 </span>
               </Link>
+              </li>
+              
             );
           })}
         </ul>

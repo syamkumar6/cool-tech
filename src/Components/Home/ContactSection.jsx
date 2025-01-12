@@ -96,22 +96,22 @@ function ContactSection() {
         <h2>24 Years Of Experience.</h2>
         <p>Customer Ratings</p>
         <div className={styles.starDiv}>
-          <img src={starIcon} alt="" />
-          <img src={starIcon} alt="" />
-          <img src={starIcon} alt="" />
-          <img src={starIcon} alt="" />
-          <img src={starIcon} alt="" />
+          <img src={starIcon} alt="star Icon" />
+          <img src={starIcon} alt="star Icon" />
+          <img src={starIcon} alt="star Icon" />
+          <img src={starIcon} alt="star Icon" />
+          <img src={starIcon} alt="star Icon" />
         </div>
         <h1>4.9 / 5.0</h1>
         <p>By 150+ Satisfied Customers</p>
         <div className={styles.contactDet}>
-          <img src={callIcon} alt="" />
+          <img src={callIcon} alt="call Icon" />
           <p>
             +91 9482055649 <br /> +91 9482326649
           </p>
         </div>
         <div className={styles.contactDet}>
-          <img src={emailIcon} alt="" />
+          <img src={emailIcon} alt="email Icon" />
           <p>roycooltechcoorg@gmail.com</p>
         </div>
       </div>
