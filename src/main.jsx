@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import { Analytics } from "@vercel/analytics/react"
 
 import RootRouter from "./Routes/RootRouter";
 import ErrorPage from "./ErrorPage";
@@ -44,5 +45,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <Analytics />
   </StrictMode>
 );
