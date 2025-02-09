@@ -28,17 +28,17 @@ function Header() {
   };
 
   const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle menu state
+    setIsMenuOpen(!isMenuOpen); 
   };
 
   const handleCloseMenu = () => {
-    setIsMenuOpen(false); // Close menu
+    setIsMenuOpen(false); 
   };
 
   useEffect(() => {
     if (state.succeeded) {
-      setIsVisible(false); // Hide the form
-      toast.success("Form submitted successfully!"); // Show success message
+      setIsVisible(false); 
+      toast.success("Form submitted successfully!"); 
     }
   }, [state.succeeded]);
 
@@ -54,6 +54,9 @@ function Header() {
           </Link>
           <Link to={"/about"} className={styles.Link}>
             ABOUT
+          </Link>
+          <Link to={"/models"} className={styles.Link}>
+            MODELS
           </Link>
           <div className={styles.dropdown}>
             <Link className={styles.Link}>PRODUCTS & SERVICES</Link>
@@ -91,15 +94,12 @@ function Header() {
                 <img src={closeIcon} alt="closeIcon" />{" "}
               </button>
               <form onSubmit={handleSubmit} className={styles.form}>
-                {/* Name Field */}
                 <input id="name" type="text" name="name" placeholder="Name" />
                 <ValidationError
                   prefix="Name"
                   field="name"
                   errors={state.errors}
                 />
-
-                {/* Email Field */}
                 <input
                   id="email"
                   type="email"
@@ -111,8 +111,6 @@ function Header() {
                   field="email"
                   errors={state.errors}
                 />
-
-                {/* Phone Number Field */}
                 <input
                   id="phone"
                   type="tel"
@@ -124,16 +122,12 @@ function Header() {
                   field="phone"
                   errors={state.errors}
                 />
-
-                {/* Message Field */}
                 <textarea id="message" name="message" placeholder="Message" />
                 <ValidationError
                   prefix="Message"
                   field="message"
                   errors={state.errors}
                 />
-
-                {/* Submit Button */}
                 <button type="submit" disabled={state.submitting}>
                   Submit
                 </button>
@@ -202,15 +196,12 @@ function Header() {
                 <img src={closeIcon} alt="closeIcon" />{" "}
               </button>
               <form onSubmit={handleSubmit} className={styles.form}>
-                {/* Name Field */}
                 <input id="name" type="text" name="name" placeholder="Name" />
                 <ValidationError
                   prefix="Name"
                   field="name"
                   errors={state.errors}
                 />
-
-                {/* Email Field */}
                 <input
                   id="email"
                   type="email"
@@ -222,8 +213,6 @@ function Header() {
                   field="email"
                   errors={state.errors}
                 />
-
-                {/* Phone Number Field */}
                 <input
                   id="phone"
                   type="tel"
@@ -235,16 +224,12 @@ function Header() {
                   field="phone"
                   errors={state.errors}
                 />
-
-                {/* Message Field */}
                 <textarea id="message" name="message" placeholder="Message" />
                 <ValidationError
                   prefix="Message"
                   field="message"
                   errors={state.errors}
                 />
-
-                {/* Submit Button */}
                 <button type="submit" disabled={state.submitting}>
                   Submit
                 </button>

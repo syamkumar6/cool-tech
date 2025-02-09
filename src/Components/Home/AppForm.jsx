@@ -5,13 +5,11 @@ import {  useState } from "react";
 function AppForm() {
   const [isVisible, setIsVisible] = useState(false);
   const [state, handleSubmit] = useForm("xqaknvgn");
-
-    if (state.succeeded) {
-      return <p>Thanks for getting in touch!</p>;
-    }
-
  
-
+  if (state.succeeded) {
+    return <p>Thanks for getting in touch!</p>;
+  }
+ 
   return isVisible && (
     <div className={styles.overlay}>
       <div className={styles.formCnt}>

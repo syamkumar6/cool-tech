@@ -271,7 +271,9 @@
   }
 
   .Header{
-    height: 16vh;
+    height: 14vh;
+    border: none;
+    background:var(--primary-color-dark);
   }
 
   .formCnt{
@@ -290,5 +292,7 @@
   .nav2{
     color: var(--primary-color-dark);
   }
+
+  
 }
 

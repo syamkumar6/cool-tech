@@ -91,4 +91,14 @@
 .aboutH2{
   font-size: 2.5rem;
 }
+
+.TextContent p{
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+.readMoreBtn{
+  color: var(--primary-color-dark);
+}
 }
