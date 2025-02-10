@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import toast from "react-hot-toast";
 import styles from "./ContactSection.module.css";
 import sendlIcon from "../../assets/svg/send.svg";
-import starIcon from "../../assets/images/star.png";
+import starIcon from "../../assets/images/star.webp";
 import callIcon from "../../assets/svg/call.svg";
 import emailIcon from "../../assets/svg/email.svg";
 
@@ -16,13 +16,11 @@ function ContactSection() {
     message: "",
   });
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Side effect: handle success
   useEffect(() => {
     if (state.succeeded) {
       toast.success("Form submitted successfully!");
@@ -33,7 +31,7 @@ function ContactSection() {
         message: "",
       });
     }
-  }, [state.succeeded]); // Run this effect only when `state.succeeded` changes
+  }, [state.succeeded]);
 
   return (
     <div className={styles.contactSection}>
@@ -98,22 +96,22 @@ function ContactSection() {
         <h2>24 Years Of Experience.</h2>
         <p>Customer Ratings</p>
         <div className={styles.starDiv}>
-          <img src={starIcon} alt="" />
-          <img src={starIcon} alt="" />
-          <img src={starIcon} alt="" />
-          <img src={starIcon} alt="" />
-          <img src={starIcon} alt="" />
+          <img src={starIcon} alt="star Icon" />
+          <img src={starIcon} alt="star Icon" />
+          <img src={starIcon} alt="star Icon" />
+          <img src={starIcon} alt="star Icon" />
+          <img src={starIcon} alt="star Icon" />
         </div>
         <h1>4.9 / 5.0</h1>
         <p>By 150+ Satisfied Customers</p>
         <div className={styles.contactDet}>
-          <img src={callIcon} alt="" />
+          <img src={callIcon} alt="call Icon" />
           <p>
             +91 9482055649 <br /> +91 9482326649
           </p>
         </div>
         <div className={styles.contactDet}>
-          <img src={emailIcon} alt="" />
+          <img src={emailIcon} alt="email Icon" />
           <p>roycooltechcoorg@gmail.com</p>
         </div>
       </div>

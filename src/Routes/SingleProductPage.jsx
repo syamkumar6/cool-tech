@@ -57,7 +57,7 @@ function SingleProductPage() {
           backgroundImage: `url(${data.bg})`,
         }}
       >
-        <h2>{data.title}</h2>
+        <h1>{data.title}</h1>
       </div>
 
       <div className={styles.pageContainer}>
@@ -99,7 +99,7 @@ function SingleProductPage() {
               >
                 <img src={whatsIcon} alt="WhatsApp Logo" /> Message
               </button>
-              <button onClick={handleCallClick} className={styles.callButton}>
+              <button onClick={handleCallClick} className={styles.callButton} >
                 <img src={callIcon} alt="Call Icon" /> Call
               </button>
             </div>

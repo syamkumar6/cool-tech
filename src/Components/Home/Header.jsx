@@ -8,7 +8,7 @@ import menuIcon from "../../assets/svg/menu.svg";
 import closeIcon2 from "../../assets/svg/close2.svg";
 import whatsIcon from "../../assets/svg/whatsappLogo.svg";
 import callIcon from "../../assets/svg/callIcon.svg";
-import logo from "../../assets/images/logo3.png"
+import logo from "../../assets/images/logo3.webp"
 
 function Header() {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,17 +28,17 @@ function Header() {
   };
 
   const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle menu state
+    setIsMenuOpen(!isMenuOpen); 
   };
 
   const handleCloseMenu = () => {
-    setIsMenuOpen(false); // Close menu
+    setIsMenuOpen(false); 
   };
 
   useEffect(() => {
     if (state.succeeded) {
-      setIsVisible(false); // Hide the form
-      toast.success("Form submitted successfully!"); // Show success message
+      setIsVisible(false); 
+      toast.success("Form submitted successfully!"); 
     }
   }, [state.succeeded]);
 
@@ -54,6 +54,9 @@ function Header() {
           </Link>
           <Link to={"/about"} className={styles.Link}>
             ABOUT
+          </Link>
+          <Link to={"/models"} className={styles.Link}>
+            MODELS
           </Link>
           <div className={styles.dropdown}>
             <Link className={styles.Link}>PRODUCTS & SERVICES</Link>
@@ -85,20 +88,18 @@ function Header() {
               <button
                 onClick={() => setIsVisible(false)}
                 className={styles.closeBtn}
+                aria-label="close button"
               >
-                {" "}
+                
                 <img src={closeIcon} alt="closeIcon" />{" "}
               </button>
               <form onSubmit={handleSubmit} className={styles.form}>
-                {/* Name Field */}
                 <input id="name" type="text" name="name" placeholder="Name" />
                 <ValidationError
                   prefix="Name"
                   field="name"
                   errors={state.errors}
                 />
-
-                {/* Email Field */}
                 <input
                   id="email"
                   type="email"
@@ -110,8 +111,6 @@ function Header() {
                   field="email"
                   errors={state.errors}
                 />
-
-                {/* Phone Number Field */}
                 <input
                   id="phone"
                   type="tel"
@@ -123,16 +122,12 @@ function Header() {
                   field="phone"
                   errors={state.errors}
                 />
-
-                {/* Message Field */}
                 <textarea id="message" name="message" placeholder="Message" />
                 <ValidationError
                   prefix="Message"
                   field="message"
                   errors={state.errors}
                 />
-
-                {/* Submit Button */}
                 <button type="submit" disabled={state.submitting}>
                   Submit
                 </button>
@@ -140,7 +135,7 @@ function Header() {
             </div>
           </div>
         )}
-        <button onClick={handleMenuToggle} className={styles.menuBtn}>
+        <button onClick={handleMenuToggle} className={styles.menuBtn} aria-label="menu button">
           <img src={menuIcon} alt="menuIcon" />
         </button>
       </header>
@@ -150,8 +145,8 @@ function Header() {
           isMenuOpen ? styles.sideSectionOpen : ""
         }`}
       >
-        <button onClick={handleCloseMenu} className={styles.closeBtn}>
-          <img src={closeIcon2} alt="" />
+        <button onClick={handleCloseMenu} className={styles.closeBtn} aria-label="close button2">
+          <img src={closeIcon2} alt="close Icon" />
         </button>
         <nav className={styles.nav2}>
           <Link to={"/"} onClick={handleCloseMenu} className={styles.Link}>
@@ -182,10 +177,10 @@ function Header() {
           >
             REQUEST A QUOTE
           </Link>
-          <button onClick={handleWhatsAppClick} className={styles.button}>
+          <button onClick={handleWhatsAppClick} className={styles.button} aria-label="wt button">
         <img src={whatsIcon} alt="WhatsApp Logo" /> Whatsapp
       </button>
-      <button onClick={handleCallClick} className={styles.button}>
+      <button onClick={handleCallClick} className={styles.button} aria-label="call button">
         <img src={callIcon} alt="Call Icon" /> Call
       </button>
         </nav>
@@ -196,20 +191,17 @@ function Header() {
               <button
                 onClick={() => setIsVisible(false)}
                 className={styles.closeBtn}
+                aria-label="close button"
               >
-                {" "}
                 <img src={closeIcon} alt="closeIcon" />{" "}
               </button>
               <form onSubmit={handleSubmit} className={styles.form}>
-                {/* Name Field */}
                 <input id="name" type="text" name="name" placeholder="Name" />
                 <ValidationError
                   prefix="Name"
                   field="name"
                   errors={state.errors}
                 />
-
-                {/* Email Field */}
                 <input
                   id="email"
                   type="email"
@@ -221,8 +213,6 @@ function Header() {
                   field="email"
                   errors={state.errors}
                 />
-
-                {/* Phone Number Field */}
                 <input
                   id="phone"
                   type="tel"
@@ -234,16 +224,12 @@ function Header() {
                   field="phone"
                   errors={state.errors}
                 />
-
-                {/* Message Field */}
                 <textarea id="message" name="message" placeholder="Message" />
                 <ValidationError
                   prefix="Message"
                   field="message"
                   errors={state.errors}
                 />
-
-                {/* Submit Button */}
                 <button type="submit" disabled={state.submitting}>
                   Submit
                 </button>
