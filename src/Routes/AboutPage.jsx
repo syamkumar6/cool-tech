@@ -27,7 +27,7 @@ function AboutPage() {
         <meta name="author" content="COOL TECH Interior" />
         <meta property="og:title" content="About COOL TECH Interior | Aluminium Fabrication Experts" />
         <meta property="og:description" content="Discover COOL TECH Interior's 24 years of excellence in aluminum fabrication and custom interiors in Coorg, Karnataka." />
-        <meta property="og:image" content="./../assets/images/cntLogo.png" />
+        <meta property="og:image" content="./../assets/images/cntLogo.webp" />
         <meta property="og:url" content="https://cooltechinterior.com/about" />
         <meta property="og:type" content="website" />
       </Helmet>
