@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import { useState } from "react";
+import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
 import styles from "./ContactSection.module.css";
 import sendlIcon from "../../assets/svg/send.svg";
@@ -8,7 +8,6 @@ import callIcon from "../../assets/svg/call.svg";
 import emailIcon from "../../assets/svg/email.svg";
 
 function ContactSection() {
-  const [state, handleSubmit] = useForm("xqaknvgn");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,17 +20,32 @@ function ContactSection() {
     setFormData({ ...formData, [name]: value });
   };
 
-  useEffect(() => {
-    if (state.succeeded) {
-      toast.success("Form submitted successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-    }
-  }, [state.succeeded]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_f2h6n5m", // Replace with your EmailJS service ID
+        "template_gqis1pd", // Replace with your EmailJS template ID
+        formData, // Data from the form
+        "D_bES6Cy1hgbX9-dk" // Replace with your EmailJS public key
+      )
+      .then(
+        (response) => {
+          toast.success("Form submitted successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+        },
+        (error) => {
+          toast.error("Failed to submit form. Please try again.");
+          console.error("EmailJS Error:", error);
+        }
+      );
+  };
 
   return (
     <div className={styles.contactSection}>
@@ -50,8 +64,8 @@ function ContactSection() {
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
+            required
           />
-          <ValidationError prefix="Name" field="name" errors={state.errors} />
 
           {/* Email Field */}
           <input
@@ -61,8 +75,8 @@ function ContactSection() {
             placeholder="Email Address"
             value={formData.email}
             onChange={handleChange}
+            required
           />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
 
           {/* Phone Number Field */}
           <input
@@ -73,7 +87,6 @@ function ContactSection() {
             value={formData.phone}
             onChange={handleChange}
           />
-          <ValidationError prefix="Phone" field="phone" errors={state.errors} />
 
           {/* Message Field */}
           <textarea
@@ -83,11 +96,11 @@ function ContactSection() {
             rows="5"
             value={formData.message}
             onChange={handleChange}
+            required
           />
-          <ValidationError prefix="Message" field="message" errors={state.errors} />
 
           {/* Submit Button */}
-          <button type="submit" disabled={state.submitting}>
+          <button type="submit">
             Submit <img src={sendlIcon} alt="" />
           </button>
         </form>
