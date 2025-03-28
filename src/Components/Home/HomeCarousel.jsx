@@ -24,7 +24,7 @@ function HomeCarousel() {
   );
 
   const [isMobile, setIsMobile] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); // Manage loading state
   const [currentImageLoaded, setCurrentImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -107,6 +107,12 @@ function HomeCarousel() {
   const slides = isMobile ? mobileSlides : desktopSlides;
 
   useEffect(() => {
+    // Simulate loader
+    const timer = setTimeout(() => setLoading(false), 2000); // 2-second loader
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     if (currentImageLoaded) {
       setAutoplayEnabled(true);
     } else {
@@ -114,29 +120,13 @@ function HomeCarousel() {
     }
   }, [currentImageLoaded]);
 
-  useEffect(() => {
-    setLoading(true);
-    setCurrentImageLoaded(false);
-    const img = new Image();
-    img.src = slides[0].src;
-    img.onload = () => {
-      setLoading(false);
-      setCurrentImageLoaded(true);
-    };
-    img.onerror = () => {
-      console.log(`Error loading image: ${slides[0].src}`);
-      setLoading(false);
-      setCurrentImageLoaded(true); // Fallback to enable autoplay
-    };
-  }, [slides]);
-
   return (
     <>
       {loading ? (
-        <Loader />
+        <Loader /> // Show loader while loading
       ) : (
         <div className={styles.embla} ref={emblaRef}>
-          <div className={`embla__container ${styles.embalaMain}`}>
+          <div className={`embla__container ${styles.emblaMain}`}>
             {slides.map((slide, index) => (
               <div
                 key={index}
@@ -154,7 +144,7 @@ function HomeCarousel() {
                     alt={slide.alt}
                     onLoad={() => setCurrentImageLoaded(true)}
                     onError={() =>
-                      console.log(`Error loading image: ${slide.src}`)
+                      console.error(`Error loading image: ${slide.src}`)
                     }
                     loading="lazy"
                   />
