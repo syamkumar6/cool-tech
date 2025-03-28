@@ -60,6 +60,12 @@ function Footer() {
               <Link to={"/service/" + 4} className={styles.footerLink}>
                 Showcase
               </Link>
+              <Link to={"/service/" + 22} className={styles.footerLink}>
+                false Ceiling
+              </Link>
+              <Link to={"/service/" + 33} className={styles.footerLink}>
+                Algeria Windows and Doors
+              </Link>
             </div>
           </div>
 
@@ -106,7 +112,7 @@ function Footer() {
           </div>
         </div>
         <div className={styles.lastSection}>
-          <span>&copy; 2024 Cool Tech. All Rights Reserved</span>
+          <span>&copy; 2025 Cool Tech. All Rights Reserved</span>
           <a  className={styles.termsLink}>
             Terms - Privacy
           </a>
