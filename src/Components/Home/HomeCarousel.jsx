@@ -9,9 +9,6 @@ import Loader from "../Loader";
 import CrlImg1 from "../../assets/images/carouselImg1.webp";
 import CrlImg2 from "../../assets/images/carouselImg2.webp";
 import CrlImg3 from "../../assets/images/carouselImg3.webp";
-import CrlImg4 from "../../assets/images/carouselImg4.webp";
-import CrlImg5 from "../../assets/images/carouselImg5.webp";
-import CrlImg6 from "../../assets/images/carouselImg6.webp";
 import crlBg1 from "../../assets/images/crlBg1.webp";
 import crlBg2 from "../../assets/images/crlBg2.webp";
 import crlBg3 from "../../assets/images/crlBg3.webp";
@@ -25,45 +22,51 @@ function HomeCarousel() {
     autoplayEnabled ? [autoplayOptions] : []
   );
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [loading, setLoading] = useState(true);
+  const [imagesLoaded, setImagesLoaded] = useState(0);
+  const [totalImages, setTotalImages] = useState(0);
 
   const desktopSlides = [
-    { src: CrlImg1, alt: "Slide 1", heading: "Crafting Excellence in Aluminum", subHeading: "Since 2000", buttonText: "View Details", link: "/about" },
-    { src: CrlImg2, alt: "Slide 2", heading: "Customized Aluminum Fabrication", subHeading: "For Every Requirement", buttonText: "Products & Services", link: "/products" },
-    { src: CrlImg3, alt: "Slide 3", heading: "Need Expert Advice?", subHeading: null, buttonText: "Connect With Us", link: "/contact" }
+    { src: CrlImg1, alt: "Slide 1", heading: "Crafting Excellence", subHeading: "Since 2000", buttonText: "View Details", link: "/about" },
+    { src: CrlImg2, alt: "Slide 2", heading: "Customized Aluminum", subHeading: "For Every Requirement", buttonText: "Products & Services", link: "/products" },
+    { src: CrlImg3, alt: "Slide 3", heading: "Need Expert Advice?", subHeading: null, buttonText: "Connect With Us", link: "/contact" },
   ];
 
   const mobileSlides = [
-    { src: CrlImg4, bg: crlBg1, alt: "Slide 4", heading: "Crafting Excellence in Aluminum", subHeading: "Since 2000", buttonText: "View Details", link: "/about" },
-    { src: CrlImg5, bg: crlBg2, alt: "Slide 5", heading: "Customized Aluminum Fabrication", subHeading: "For Every Requirement", buttonText: "Products & Services", link: "/products" },
-    { src: CrlImg6, bg: crlBg3, alt: "Slide 6", heading: "Need Expert Advice?", subHeading: "Aluminum Fabrication", buttonText: "Connect With Us", link: "/contact" }
+    { src: crlBg1, alt: "Slide 4", heading: "Crafting Excellence in Aluminum ", subHeading: "Quality & Innovation Since 2000", buttonText: "View Details", link: "/about" },
+    { src: crlBg2, alt: "Slide 5", heading: "Customized Aluminum Solutions", subHeading: "Designed to Fit Your Needs", buttonText: "Products & Services", link: "/products" },
+    { src: crlBg3, alt: "Slide 6", heading: "Need Expert Advice?", subHeading: "Reliable Aluminum Fabrication", buttonText: "Connect With Us", link: "/contact" },
   ];
 
   const slides = isMobile ? mobileSlides : desktopSlides;
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    setIsMobile(mediaQuery.matches);
-    mediaQuery.addEventListener("change", () => setIsMobile(mediaQuery.matches));
-    return () => mediaQuery.removeEventListener("change", () => setIsMobile(mediaQuery.matches));
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  
   useEffect(() => {
-    // Preload all images before hiding loader
-    const imagePromises = slides.map(slide => 
-      new Promise(resolve => {
-        const img = new Image();
-        img.src = slide.src;
-        img.onload = resolve;
-        img.onerror = resolve; // Resolve even if error occurs
-      })
-    );
+    setImagesLoaded(0);
+    setTotalImages(slides.length);
 
-    Promise.all(imagePromises).then(() => {
-      setTimeout(() => setLoading(false), 500); // Smooth transition
+    slides.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.src; 
+      img.onload = () => setImagesLoaded((prev) => prev + 1);
     });
   }, [slides]);
+
+  useEffect(() => {
+    if (imagesLoaded === totalImages) {
+      setTimeout(() => {
+        setLoading(false);
+        setAutoplayEnabled(true);
+      }, 500);
+    }
+  }, [imagesLoaded, totalImages]);
 
   return (
     <>
@@ -73,23 +76,8 @@ function HomeCarousel() {
         <div className={styles.embla} ref={emblaRef}>
           <div className={`embla__container ${styles.emblaMain}`}>
             {slides.map((slide, index) => (
-              <div
-                key={index}
-                className={`embla__slide ${styles.imgContainer}`}
-                style={{
-                  backgroundImage: isMobile ? `url(${slide.bg})` : "none",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                {!isMobile && (
-                  <img
-                    className={styles.carouselImg}
-                    src={slide.src}
-                    alt={slide.alt}
-                    loading="eager"
-                  />
-                )}
+              <div key={index} className={`embla__slide ${styles.imgContainer}`}>
+                <img className={styles.carouselImg} src={slide.src} alt={slide.alt} loading="eager" />
                 <div className={styles.imgOverlay}></div>
                 <div className={styles.cntDiv}>
                   <h1>
@@ -110,3 +98,4 @@ function HomeCarousel() {
 }
 
 export default HomeCarousel;
+
