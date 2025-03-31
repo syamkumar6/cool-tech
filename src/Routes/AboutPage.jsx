@@ -10,9 +10,7 @@ function AboutPage() {
   const [hoveredImage, setHoveredImage] = useState(logo); // Default image
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-    });
+    window.scrollTo(0, 0);
   }, []);
 
   return (
