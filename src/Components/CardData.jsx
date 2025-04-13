@@ -307,7 +307,7 @@ const cardData = [
   "With their sleek and modern designs, aluminium prayer cabinets blend seamlessly with contemporary interiors while maintaining a traditional essence. They provide an ideal space to organize and display your religious idols, books, and other sacred items"
     ],
     gImg: [prayer1, prayer2, prayer3],
-    id: 33,
+    id: 34,
     bNote: [
       "Durable and Rust-Resistant",
   "Compact and Versatile Design",
