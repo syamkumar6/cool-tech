@@ -55,9 +55,6 @@ function Header() {
           <Link to={"/about"} className={styles.Link}>
             ABOUT
           </Link>
-          <Link to={"/models"} className={styles.Link}>
-            MODELS
-          </Link>
           <div className={styles.dropdown}>
             <Link className={styles.Link}>PRODUCTS & SERVICES</Link>
             <div className={styles.dropdownContent}>
